@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/emptyangularproject?useSSL=false
+    username: bbdd
+    password: bbdd 
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update  
+      naming.strategy: org.hibernate.cfg.ImprovedNamingStrategy  
+    show-sql: false 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
